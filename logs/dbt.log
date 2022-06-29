@@ -6648,3 +6648,478 @@ SELECT * FROM records_to_insert
 14:10:58.294463 [info ] [MainThread]: 
 14:10:58.294604 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
 14:10:58.294858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fe8b580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1384a9490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1384a9250>]}
+
+
+============================== 2022-06-29 14:20:50.911933 | 25acf242-afa1-4976-ab5e-ed7647177c4f ==============================
+14:20:50.911973 [info ] [MainThread]: Running with dbt=1.1.0
+14:20:50.912874 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/adambekele/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['facebook_accounts_sat'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+14:20:50.913007 [debug] [MainThread]: Tracking: tracking
+14:20:50.913244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127fb06a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127fb0400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127fb03a0>]}
+14:20:51.028015 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+14:20:51.028276 [debug] [MainThread]: Partial parsing: added file: HackdayVault://models/satellites/facebook_accounts_sat.sql
+14:20:51.035237 [debug] [MainThread]: 1603: static parser failed on satellites/facebook_accounts_sat.sql
+14:20:51.093560 [debug] [MainThread]: 1602: parser fallback to jinja rendering on satellites/facebook_accounts_sat.sql
+14:20:51.093857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x158218970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127f96640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15816ad60>]}
+
+
+============================== 2022-06-29 14:21:15.615128 | ec93041b-026b-48d6-9626-dd657fe93216 ==============================
+14:21:15.615172 [info ] [MainThread]: Running with dbt=1.1.0
+14:21:15.615611 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/adambekele/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['facebook_accounts_sat'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+14:21:15.615724 [debug] [MainThread]: Tracking: tracking
+14:21:15.615945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12dd11dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12dd11ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12dd34d30>]}
+14:21:15.733395 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+14:21:15.733653 [debug] [MainThread]: Partial parsing: added file: HackdayVault://models/satellites/facebook_accounts_sat.sql
+14:21:15.740674 [debug] [MainThread]: 1603: static parser failed on satellites/facebook_accounts_sat.sql
+14:21:15.810384 [debug] [MainThread]: 1602: parser fallback to jinja rendering on satellites/facebook_accounts_sat.sql
+14:21:15.820723 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ec93041b-026b-48d6-9626-dd657fe93216', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12e9890d0>]}
+14:21:15.829804 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ec93041b-026b-48d6-9626-dd657fe93216', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12dce4190>]}
+14:21:15.830044 [info ] [MainThread]: Found 9 models, 9 tests, 0 snapshots, 0 analyses, 545 macros, 0 operations, 0 seed files, 2 sources, 0 exposures, 0 metrics
+14:21:15.830215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ec93041b-026b-48d6-9626-dd657fe93216', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12dce1c70>]}
+14:21:15.830939 [info ] [MainThread]: 
+14:21:15.831220 [debug] [MainThread]: Acquiring new snowflake connection "master"
+14:21:15.831642 [debug] [ThreadPool]: Acquiring new snowflake connection "list_BLINKIST_DEV"
+14:21:15.838289 [debug] [ThreadPool]: Using snowflake connection "list_BLINKIST_DEV"
+14:21:15.838538 [debug] [ThreadPool]: On list_BLINKIST_DEV: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "connection_name": "list_BLINKIST_DEV"} */
+
+    show terse schemas in database BLINKIST_DEV
+    limit 10000
+14:21:15.838633 [debug] [ThreadPool]: Opening a new connection, currently in state init
+14:21:17.283967 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 1.45 seconds
+14:21:17.287003 [debug] [ThreadPool]: On list_BLINKIST_DEV: Close
+14:21:17.579190 [debug] [ThreadPool]: Acquiring new snowflake connection "list_BLINKIST_DEV_hackday"
+14:21:17.594384 [debug] [ThreadPool]: Using snowflake connection "list_BLINKIST_DEV_hackday"
+14:21:17.594860 [debug] [ThreadPool]: On list_BLINKIST_DEV_hackday: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "connection_name": "list_BLINKIST_DEV_hackday"} */
+
+    show terse objects in BLINKIST_DEV.hackday
+14:21:17.595091 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+14:21:18.586230 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 0.99 seconds
+14:21:18.590627 [debug] [ThreadPool]: On list_BLINKIST_DEV_hackday: Close
+14:21:18.954927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ec93041b-026b-48d6-9626-dd657fe93216', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12dce27f0>]}
+14:21:18.955984 [info ] [MainThread]: Concurrency: 4 threads (target='hackday')
+14:21:18.956521 [info ] [MainThread]: 
+14:21:18.972349 [debug] [Thread-1  ]: Began running node model.HackdayVault.facebook_accounts_sat
+14:21:18.973115 [info ] [Thread-1  ]: 1 of 1 START view model hackday.facebook_accounts_sat .......................... [RUN]
+14:21:18.974029 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.HackdayVault.facebook_accounts_sat"
+14:21:18.974351 [debug] [Thread-1  ]: Began compiling node model.HackdayVault.facebook_accounts_sat
+14:21:18.974647 [debug] [Thread-1  ]: Compiling model.HackdayVault.facebook_accounts_sat
+14:21:18.999885 [debug] [Thread-1  ]: Writing injected SQL for node "model.HackdayVault.facebook_accounts_sat"
+14:21:19.001284 [debug] [Thread-1  ]: finished collecting timing info
+14:21:19.001632 [debug] [Thread-1  ]: Began executing node model.HackdayVault.facebook_accounts_sat
+14:21:19.023265 [debug] [Thread-1  ]: Writing runtime SQL for node "model.HackdayVault.facebook_accounts_sat"
+14:21:19.025338 [debug] [Thread-1  ]: Using snowflake connection "model.HackdayVault.facebook_accounts_sat"
+14:21:19.025465 [debug] [Thread-1  ]: On model.HackdayVault.facebook_accounts_sat: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "node_id": "model.HackdayVault.facebook_accounts_sat"} */
+
+  create or replace  view BLINKIST_DEV.hackday.facebook_accounts_sat
+  
+   as (
+    
+
+-- Generated by dbtvault.
+
+WITH source_data AS (
+    SELECT a."FACEBOOK_ACCOUNTS_HK", a."ACCOUNT_ID", a."CURRENCY_CODE", a."ACCOUNT_NAME", a.EFFECTIVE_FROM, a."LOAD_DATETIME", a."RECORD_SOURCE"
+    FROM BLINKIST_DEV.hackday.facebook_accounts_staging_hashed AS a
+    WHERE a."FACEBOOK_ACCOUNTS_HK" IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage."FACEBOOK_ACCOUNTS_HK", stage."ACCOUNT_ID", stage."CURRENCY_CODE", stage."ACCOUNT_NAME", stage.EFFECTIVE_FROM, stage."LOAD_DATETIME", stage."RECORD_SOURCE"
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert
+  );
+14:21:19.025572 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+14:21:20.267748 [debug] [Thread-1  ]: Snowflake adapter: Snowflake query id: 01a545dd-0000-a4d0-0002-34660034ca3e
+14:21:20.268315 [debug] [Thread-1  ]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 9 at position 72
+invalid identifier 'A.ACCOUNT_NAME'
+14:21:20.268776 [debug] [Thread-1  ]: finished collecting timing info
+14:21:20.269070 [debug] [Thread-1  ]: On model.HackdayVault.facebook_accounts_sat: Close
+14:21:20.567255 [debug] [Thread-1  ]: Database Error in model facebook_accounts_sat (models/satellites/facebook_accounts_sat.sql)
+  000904 (42000): SQL compilation error: error line 9 at position 72
+  invalid identifier 'A.ACCOUNT_NAME'
+  compiled SQL at target/run/HackdayVault/models/satellites/facebook_accounts_sat.sql
+14:21:20.568661 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ec93041b-026b-48d6-9626-dd657fe93216', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ee344f0>]}
+14:21:20.569843 [error] [Thread-1  ]: 1 of 1 ERROR creating view model hackday.facebook_accounts_sat ................. [[31mERROR[0m in 1.59s]
+14:21:20.571218 [debug] [Thread-1  ]: Finished running node model.HackdayVault.facebook_accounts_sat
+14:21:20.574085 [debug] [MainThread]: Acquiring new snowflake connection "master"
+14:21:20.575397 [info ] [MainThread]: 
+14:21:20.576449 [info ] [MainThread]: Finished running 1 view model in 4.74s.
+14:21:20.577375 [debug] [MainThread]: Connection 'master' was properly closed.
+14:21:20.577900 [debug] [MainThread]: Connection 'model.HackdayVault.facebook_accounts_sat' was properly closed.
+14:21:20.665538 [info ] [MainThread]: 
+14:21:20.665853 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+14:21:20.666088 [info ] [MainThread]: 
+14:21:20.666286 [error] [MainThread]: [33mDatabase Error in model facebook_accounts_sat (models/satellites/facebook_accounts_sat.sql)[0m
+14:21:20.666482 [error] [MainThread]:   000904 (42000): SQL compilation error: error line 9 at position 72
+14:21:20.666665 [error] [MainThread]:   invalid identifier 'A.ACCOUNT_NAME'
+14:21:20.666845 [error] [MainThread]:   compiled SQL at target/run/HackdayVault/models/satellites/facebook_accounts_sat.sql
+14:21:20.667030 [info ] [MainThread]: 
+14:21:20.667216 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+14:21:20.667477 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12dce44c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12dce41c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ee34190>]}
+
+
+============================== 2022-06-29 14:22:42.066829 | 259456cb-17f4-4eae-9b0a-0eab1b612950 ==============================
+14:22:42.066845 [info ] [MainThread]: Running with dbt=1.1.0
+14:22:42.067331 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/adambekele/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['facebook_accounts_sat'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+14:22:42.067462 [debug] [MainThread]: Tracking: tracking
+14:22:42.067697 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fb4d250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fb4d070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fb30e20>]}
+14:22:42.203056 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+14:22:42.203352 [debug] [MainThread]: Partial parsing: updated file: HackdayVault://models/satellites/facebook_accounts_sat.sql
+14:22:42.210418 [debug] [MainThread]: 1603: static parser failed on satellites/facebook_accounts_sat.sql
+14:22:42.272379 [debug] [MainThread]: 1602: parser fallback to jinja rendering on satellites/facebook_accounts_sat.sql
+14:22:42.280039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '259456cb-17f4-4eae-9b0a-0eab1b612950', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ff8d0d0>]}
+14:22:42.340050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '259456cb-17f4-4eae-9b0a-0eab1b612950', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fb7e1f0>]}
+14:22:42.340324 [info ] [MainThread]: Found 9 models, 9 tests, 0 snapshots, 0 analyses, 545 macros, 0 operations, 0 seed files, 2 sources, 0 exposures, 0 metrics
+14:22:42.340531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '259456cb-17f4-4eae-9b0a-0eab1b612950', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11faf6d30>]}
+14:22:42.341419 [info ] [MainThread]: 
+14:22:42.341755 [debug] [MainThread]: Acquiring new snowflake connection "master"
+14:22:42.342253 [debug] [ThreadPool]: Acquiring new snowflake connection "list_BLINKIST_DEV"
+14:22:42.351076 [debug] [ThreadPool]: Using snowflake connection "list_BLINKIST_DEV"
+14:22:42.351213 [debug] [ThreadPool]: On list_BLINKIST_DEV: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "connection_name": "list_BLINKIST_DEV"} */
+
+    show terse schemas in database BLINKIST_DEV
+    limit 10000
+14:22:42.351315 [debug] [ThreadPool]: Opening a new connection, currently in state init
+14:22:43.624999 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 1.27 seconds
+14:22:43.627376 [debug] [ThreadPool]: On list_BLINKIST_DEV: Close
+14:22:44.040297 [debug] [ThreadPool]: Acquiring new snowflake connection "list_BLINKIST_DEV_hackday"
+14:22:44.052678 [debug] [ThreadPool]: Using snowflake connection "list_BLINKIST_DEV_hackday"
+14:22:44.052985 [debug] [ThreadPool]: On list_BLINKIST_DEV_hackday: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "connection_name": "list_BLINKIST_DEV_hackday"} */
+
+    show terse objects in BLINKIST_DEV.hackday
+14:22:44.053178 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+14:22:45.454202 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 1.4 seconds
+14:22:45.458628 [debug] [ThreadPool]: On list_BLINKIST_DEV_hackday: Close
+14:22:45.750114 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '259456cb-17f4-4eae-9b0a-0eab1b612950', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fb00fa0>]}
+14:22:45.751168 [info ] [MainThread]: Concurrency: 4 threads (target='hackday')
+14:22:45.751750 [info ] [MainThread]: 
+14:22:45.759572 [debug] [Thread-1  ]: Began running node model.HackdayVault.facebook_accounts_sat
+14:22:45.760106 [info ] [Thread-1  ]: 1 of 1 START view model hackday.facebook_accounts_sat .......................... [RUN]
+14:22:45.760821 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.HackdayVault.facebook_accounts_sat"
+14:22:45.761058 [debug] [Thread-1  ]: Began compiling node model.HackdayVault.facebook_accounts_sat
+14:22:45.761303 [debug] [Thread-1  ]: Compiling model.HackdayVault.facebook_accounts_sat
+14:22:45.781582 [debug] [Thread-1  ]: Writing injected SQL for node "model.HackdayVault.facebook_accounts_sat"
+14:22:45.785156 [debug] [Thread-1  ]: finished collecting timing info
+14:22:45.785449 [debug] [Thread-1  ]: Began executing node model.HackdayVault.facebook_accounts_sat
+14:22:45.808860 [debug] [Thread-1  ]: Writing runtime SQL for node "model.HackdayVault.facebook_accounts_sat"
+14:22:45.820399 [debug] [Thread-1  ]: Using snowflake connection "model.HackdayVault.facebook_accounts_sat"
+14:22:45.820629 [debug] [Thread-1  ]: On model.HackdayVault.facebook_accounts_sat: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "node_id": "model.HackdayVault.facebook_accounts_sat"} */
+
+  create or replace  view BLINKIST_DEV.hackday.facebook_accounts_sat
+  
+   as (
+    
+
+-- Generated by dbtvault.
+
+WITH source_data AS (
+    SELECT a."FACEBOOK_ACCOUNTS_HK", a."ACCOUNT_ID", a."CURRENCY_CODE", a."NAME", a.EFFECTIVE_FROM, a."LOAD_DATETIME", a."RECORD_SOURCE"
+    FROM BLINKIST_DEV.hackday.facebook_accounts_staging_hashed AS a
+    WHERE a."FACEBOOK_ACCOUNTS_HK" IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage."FACEBOOK_ACCOUNTS_HK", stage."ACCOUNT_ID", stage."CURRENCY_CODE", stage."NAME", stage.EFFECTIVE_FROM, stage."LOAD_DATETIME", stage."RECORD_SOURCE"
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert
+  );
+14:22:45.820763 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+14:22:46.914138 [debug] [Thread-1  ]: Snowflake adapter: Snowflake query id: 01a545de-0000-a4a0-0002-34660034b9c6
+14:22:46.914533 [debug] [Thread-1  ]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 9 at position 82
+invalid identifier 'A.EFFECTIVE_FROM'
+14:22:46.914970 [debug] [Thread-1  ]: finished collecting timing info
+14:22:46.915233 [debug] [Thread-1  ]: On model.HackdayVault.facebook_accounts_sat: Close
+14:22:47.272704 [debug] [Thread-1  ]: Database Error in model facebook_accounts_sat (models/satellites/facebook_accounts_sat.sql)
+  000904 (42000): SQL compilation error: error line 9 at position 82
+  invalid identifier 'A.EFFECTIVE_FROM'
+  compiled SQL at target/run/HackdayVault/models/satellites/facebook_accounts_sat.sql
+14:22:47.273500 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '259456cb-17f4-4eae-9b0a-0eab1b612950', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13845c580>]}
+14:22:47.274173 [error] [Thread-1  ]: 1 of 1 ERROR creating view model hackday.facebook_accounts_sat ................. [[31mERROR[0m in 1.51s]
+14:22:47.274978 [debug] [Thread-1  ]: Finished running node model.HackdayVault.facebook_accounts_sat
+14:22:47.276456 [debug] [MainThread]: Acquiring new snowflake connection "master"
+14:22:47.276934 [info ] [MainThread]: 
+14:22:47.277339 [info ] [MainThread]: Finished running 1 view model in 4.94s.
+14:22:47.277709 [debug] [MainThread]: Connection 'master' was properly closed.
+14:22:47.277904 [debug] [MainThread]: Connection 'model.HackdayVault.facebook_accounts_sat' was properly closed.
+14:22:47.371969 [info ] [MainThread]: 
+14:22:47.372335 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+14:22:47.372571 [info ] [MainThread]: 
+14:22:47.372766 [error] [MainThread]: [33mDatabase Error in model facebook_accounts_sat (models/satellites/facebook_accounts_sat.sql)[0m
+14:22:47.372957 [error] [MainThread]:   000904 (42000): SQL compilation error: error line 9 at position 82
+14:22:47.373138 [error] [MainThread]:   invalid identifier 'A.EFFECTIVE_FROM'
+14:22:47.373320 [error] [MainThread]:   compiled SQL at target/run/HackdayVault/models/satellites/facebook_accounts_sat.sql
+14:22:47.373510 [info ] [MainThread]: 
+14:22:47.373697 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+14:22:47.373965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fd81100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fd81b80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13845c190>]}
+
+
+============================== 2022-06-29 14:23:15.253140 | 89b7f91e-3e8e-4e5d-9753-c89de26ea351 ==============================
+14:23:15.253155 [info ] [MainThread]: Running with dbt=1.1.0
+14:23:15.254637 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/adambekele/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['facebook_accounts_sat'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+14:23:15.254759 [debug] [MainThread]: Tracking: tracking
+14:23:15.255030 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12381a5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12381ac40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12383c0d0>]}
+14:23:15.382526 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+14:23:15.382807 [debug] [MainThread]: Partial parsing: updated file: HackdayVault://models/satellites/facebook_accounts_sat.sql
+14:23:15.389750 [debug] [MainThread]: 1603: static parser failed on satellites/facebook_accounts_sat.sql
+14:23:15.451174 [debug] [MainThread]: 1602: parser fallback to jinja rendering on satellites/facebook_accounts_sat.sql
+14:23:15.458582 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '89b7f91e-3e8e-4e5d-9753-c89de26ea351', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x123cbe0d0>]}
+14:23:15.507722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '89b7f91e-3e8e-4e5d-9753-c89de26ea351', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12386e040>]}
+14:23:15.508011 [info ] [MainThread]: Found 9 models, 9 tests, 0 snapshots, 0 analyses, 545 macros, 0 operations, 0 seed files, 2 sources, 0 exposures, 0 metrics
+14:23:15.508240 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '89b7f91e-3e8e-4e5d-9753-c89de26ea351', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1237dddc0>]}
+14:23:15.509146 [info ] [MainThread]: 
+14:23:15.509520 [debug] [MainThread]: Acquiring new snowflake connection "master"
+14:23:15.510050 [debug] [ThreadPool]: Acquiring new snowflake connection "list_BLINKIST_DEV"
+14:23:15.518547 [debug] [ThreadPool]: Using snowflake connection "list_BLINKIST_DEV"
+14:23:15.518687 [debug] [ThreadPool]: On list_BLINKIST_DEV: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "connection_name": "list_BLINKIST_DEV"} */
+
+    show terse schemas in database BLINKIST_DEV
+    limit 10000
+14:23:15.518787 [debug] [ThreadPool]: Opening a new connection, currently in state init
+14:23:16.887473 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 1.37 seconds
+14:23:16.889850 [debug] [ThreadPool]: On list_BLINKIST_DEV: Close
+14:23:17.188373 [debug] [ThreadPool]: Acquiring new snowflake connection "list_BLINKIST_DEV_hackday"
+14:23:17.201613 [debug] [ThreadPool]: Using snowflake connection "list_BLINKIST_DEV_hackday"
+14:23:17.201984 [debug] [ThreadPool]: On list_BLINKIST_DEV_hackday: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "connection_name": "list_BLINKIST_DEV_hackday"} */
+
+    show terse objects in BLINKIST_DEV.hackday
+14:23:17.202187 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+14:23:18.702684 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 1.5 seconds
+14:23:18.707492 [debug] [ThreadPool]: On list_BLINKIST_DEV_hackday: Close
+14:23:19.316670 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '89b7f91e-3e8e-4e5d-9753-c89de26ea351', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1237ecb20>]}
+14:23:19.317993 [info ] [MainThread]: Concurrency: 4 threads (target='hackday')
+14:23:19.318799 [info ] [MainThread]: 
+14:23:19.325638 [debug] [Thread-1  ]: Began running node model.HackdayVault.facebook_accounts_sat
+14:23:19.326156 [info ] [Thread-1  ]: 1 of 1 START view model hackday.facebook_accounts_sat .......................... [RUN]
+14:23:19.326854 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.HackdayVault.facebook_accounts_sat"
+14:23:19.327103 [debug] [Thread-1  ]: Began compiling node model.HackdayVault.facebook_accounts_sat
+14:23:19.327329 [debug] [Thread-1  ]: Compiling model.HackdayVault.facebook_accounts_sat
+14:23:19.346329 [debug] [Thread-1  ]: Writing injected SQL for node "model.HackdayVault.facebook_accounts_sat"
+14:23:19.350612 [debug] [Thread-1  ]: finished collecting timing info
+14:23:19.350728 [debug] [Thread-1  ]: Began executing node model.HackdayVault.facebook_accounts_sat
+14:23:19.373439 [debug] [Thread-1  ]: Writing runtime SQL for node "model.HackdayVault.facebook_accounts_sat"
+14:23:19.377777 [debug] [Thread-1  ]: Using snowflake connection "model.HackdayVault.facebook_accounts_sat"
+14:23:19.377941 [debug] [Thread-1  ]: On model.HackdayVault.facebook_accounts_sat: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "node_id": "model.HackdayVault.facebook_accounts_sat"} */
+
+  create or replace  view BLINKIST_DEV.hackday.facebook_accounts_sat
+  
+   as (
+    
+
+-- Generated by dbtvault.
+
+WITH source_data AS (
+    SELECT a."FACEBOOK_ACCOUNTS_HK", a."ACCOUNT_ID", a."CURRENCY_CODE", a."NAME", a."LOAD_DATETIME", a."RECORD_SOURCE"
+    FROM BLINKIST_DEV.hackday.facebook_accounts_staging_hashed AS a
+    WHERE a."FACEBOOK_ACCOUNTS_HK" IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage."FACEBOOK_ACCOUNTS_HK", stage."ACCOUNT_ID", stage."CURRENCY_CODE", stage."NAME", stage."LOAD_DATETIME", stage."RECORD_SOURCE"
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert
+  );
+14:23:19.378069 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+14:23:21.072545 [debug] [Thread-1  ]: Snowflake adapter: Snowflake query id: 01a545df-0000-a4a0-0002-34660034b9ca
+14:23:21.073094 [debug] [Thread-1  ]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 9 at position 82
+invalid identifier 'A.LOAD_DATETIME'
+14:23:21.073643 [debug] [Thread-1  ]: finished collecting timing info
+14:23:21.073927 [debug] [Thread-1  ]: On model.HackdayVault.facebook_accounts_sat: Close
+14:23:21.372928 [debug] [Thread-1  ]: Database Error in model facebook_accounts_sat (models/satellites/facebook_accounts_sat.sql)
+  000904 (42000): SQL compilation error: error line 9 at position 82
+  invalid identifier 'A.LOAD_DATETIME'
+  compiled SQL at target/run/HackdayVault/models/satellites/facebook_accounts_sat.sql
+14:23:21.374137 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '89b7f91e-3e8e-4e5d-9753-c89de26ea351', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1240f6610>]}
+14:23:21.374870 [error] [Thread-1  ]: 1 of 1 ERROR creating view model hackday.facebook_accounts_sat ................. [[31mERROR[0m in 2.05s]
+14:23:21.376226 [debug] [Thread-1  ]: Finished running node model.HackdayVault.facebook_accounts_sat
+14:23:21.377907 [debug] [MainThread]: Acquiring new snowflake connection "master"
+14:23:21.378447 [info ] [MainThread]: 
+14:23:21.378863 [info ] [MainThread]: Finished running 1 view model in 5.87s.
+14:23:21.379227 [debug] [MainThread]: Connection 'master' was properly closed.
+14:23:21.379428 [debug] [MainThread]: Connection 'model.HackdayVault.facebook_accounts_sat' was properly closed.
+14:23:21.473126 [info ] [MainThread]: 
+14:23:21.473441 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+14:23:21.473677 [info ] [MainThread]: 
+14:23:21.473883 [error] [MainThread]: [33mDatabase Error in model facebook_accounts_sat (models/satellites/facebook_accounts_sat.sql)[0m
+14:23:21.474078 [error] [MainThread]:   000904 (42000): SQL compilation error: error line 9 at position 82
+14:23:21.474267 [error] [MainThread]:   invalid identifier 'A.LOAD_DATETIME'
+14:23:21.474446 [error] [MainThread]:   compiled SQL at target/run/HackdayVault/models/satellites/facebook_accounts_sat.sql
+14:23:21.474629 [info ] [MainThread]: 
+14:23:21.474816 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+14:23:21.475069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x123969190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x123969c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1240f64c0>]}
+
+
+============================== 2022-06-29 14:24:32.188187 | 464403fc-e916-4759-a5f3-27b6fb8f2b78 ==============================
+14:24:32.188208 [info ] [MainThread]: Running with dbt=1.1.0
+14:24:32.188781 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/adambekele/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['facebook_accounts_sat'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+14:24:32.188955 [debug] [MainThread]: Tracking: tracking
+14:24:32.189226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13609df70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13609ddf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13609d160>]}
+14:24:32.317242 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+14:24:32.317532 [debug] [MainThread]: Partial parsing: updated file: HackdayVault://models/satellites/facebook_accounts_sat.sql
+14:24:32.324456 [debug] [MainThread]: 1603: static parser failed on satellites/facebook_accounts_sat.sql
+14:24:32.390817 [debug] [MainThread]: 1602: parser fallback to jinja rendering on satellites/facebook_accounts_sat.sql
+14:24:32.398720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '464403fc-e916-4759-a5f3-27b6fb8f2b78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13653e0d0>]}
+14:24:32.445187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '464403fc-e916-4759-a5f3-27b6fb8f2b78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1360ce8b0>]}
+14:24:32.445479 [info ] [MainThread]: Found 9 models, 9 tests, 0 snapshots, 0 analyses, 545 macros, 0 operations, 0 seed files, 2 sources, 0 exposures, 0 metrics
+14:24:32.445699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '464403fc-e916-4759-a5f3-27b6fb8f2b78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x136065e50>]}
+14:24:32.446586 [info ] [MainThread]: 
+14:24:32.446934 [debug] [MainThread]: Acquiring new snowflake connection "master"
+14:24:32.447419 [debug] [ThreadPool]: Acquiring new snowflake connection "list_BLINKIST_DEV"
+14:24:32.455965 [debug] [ThreadPool]: Using snowflake connection "list_BLINKIST_DEV"
+14:24:32.456128 [debug] [ThreadPool]: On list_BLINKIST_DEV: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "connection_name": "list_BLINKIST_DEV"} */
+
+    show terse schemas in database BLINKIST_DEV
+    limit 10000
+14:24:32.456240 [debug] [ThreadPool]: Opening a new connection, currently in state init
+14:24:33.751499 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 1.3 seconds
+14:24:33.754305 [debug] [ThreadPool]: On list_BLINKIST_DEV: Close
+14:24:34.141052 [debug] [ThreadPool]: Acquiring new snowflake connection "list_BLINKIST_DEV_hackday"
+14:24:34.151333 [debug] [ThreadPool]: Using snowflake connection "list_BLINKIST_DEV_hackday"
+14:24:34.151670 [debug] [ThreadPool]: On list_BLINKIST_DEV_hackday: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "connection_name": "list_BLINKIST_DEV_hackday"} */
+
+    show terse objects in BLINKIST_DEV.hackday
+14:24:34.151843 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+14:24:35.202873 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 1.05 seconds
+14:24:35.207107 [debug] [ThreadPool]: On list_BLINKIST_DEV_hackday: Close
+14:24:35.500962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '464403fc-e916-4759-a5f3-27b6fb8f2b78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1361cc490>]}
+14:24:35.502222 [info ] [MainThread]: Concurrency: 4 threads (target='hackday')
+14:24:35.502867 [info ] [MainThread]: 
+14:24:35.509849 [debug] [Thread-1  ]: Began running node model.HackdayVault.facebook_accounts_sat
+14:24:35.510346 [info ] [Thread-1  ]: 1 of 1 START view model hackday.facebook_accounts_sat .......................... [RUN]
+14:24:35.511023 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.HackdayVault.facebook_accounts_sat"
+14:24:35.511264 [debug] [Thread-1  ]: Began compiling node model.HackdayVault.facebook_accounts_sat
+14:24:35.511491 [debug] [Thread-1  ]: Compiling model.HackdayVault.facebook_accounts_sat
+14:24:35.530825 [debug] [Thread-1  ]: Writing injected SQL for node "model.HackdayVault.facebook_accounts_sat"
+14:24:35.535410 [debug] [Thread-1  ]: finished collecting timing info
+14:24:35.535622 [debug] [Thread-1  ]: Began executing node model.HackdayVault.facebook_accounts_sat
+14:24:35.559185 [debug] [Thread-1  ]: Writing runtime SQL for node "model.HackdayVault.facebook_accounts_sat"
+14:24:35.563133 [debug] [Thread-1  ]: Using snowflake connection "model.HackdayVault.facebook_accounts_sat"
+14:24:35.563283 [debug] [Thread-1  ]: On model.HackdayVault.facebook_accounts_sat: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "node_id": "model.HackdayVault.facebook_accounts_sat"} */
+
+  create or replace  view BLINKIST_DEV.hackday.facebook_accounts_sat
+  
+   as (
+    
+
+-- Generated by dbtvault.
+
+WITH source_data AS (
+    SELECT a."FACEBOOK_ACCOUNTS_HK", a."ACCOUNT_ID", a."CURRENCY_CODE", a."NAME", a."_FIVETRAN_SYNCED", a."RECORD_SOURCE"
+    FROM BLINKIST_DEV.hackday.facebook_accounts_staging_hashed AS a
+    WHERE a."FACEBOOK_ACCOUNTS_HK" IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage."FACEBOOK_ACCOUNTS_HK", stage."ACCOUNT_ID", stage."CURRENCY_CODE", stage."NAME", stage."_FIVETRAN_SYNCED", stage."RECORD_SOURCE"
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert
+  );
+14:24:35.563404 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+14:24:36.877506 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.31 seconds
+14:24:36.891114 [debug] [Thread-1  ]: finished collecting timing info
+14:24:36.891602 [debug] [Thread-1  ]: On model.HackdayVault.facebook_accounts_sat: Close
+14:24:37.844833 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '464403fc-e916-4759-a5f3-27b6fb8f2b78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13688ce80>]}
+14:24:37.846086 [info ] [Thread-1  ]: 1 of 1 OK created view model hackday.facebook_accounts_sat ..................... [[32mSUCCESS 1[0m in 2.33s]
+14:24:37.847141 [debug] [Thread-1  ]: Finished running node model.HackdayVault.facebook_accounts_sat
+14:24:37.848899 [debug] [MainThread]: Acquiring new snowflake connection "master"
+14:24:37.849453 [info ] [MainThread]: 
+14:24:37.849872 [info ] [MainThread]: Finished running 1 view model in 5.40s.
+14:24:37.850240 [debug] [MainThread]: Connection 'master' was properly closed.
+14:24:37.850440 [debug] [MainThread]: Connection 'model.HackdayVault.facebook_accounts_sat' was properly closed.
+14:24:37.940072 [info ] [MainThread]: 
+14:24:37.940459 [info ] [MainThread]: [32mCompleted successfully[0m
+14:24:37.940730 [info ] [MainThread]: 
+14:24:37.940948 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+14:24:37.941247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x136703070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13604f0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x136733d90>]}
+
+
+============================== 2022-06-29 14:28:08.906843 | bafc80a8-49a3-427c-95e9-b611c72f354a ==============================
+14:28:08.906875 [info ] [MainThread]: Running with dbt=1.1.0
+14:28:08.907367 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/adambekele/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['facebook_ads_insights_sat'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+14:28:08.907511 [debug] [MainThread]: Tracking: tracking
+14:28:08.907741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x161de8d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x161de84f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x161de8370>]}
+14:28:09.052736 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+14:28:09.053074 [debug] [MainThread]: Partial parsing: added file: HackdayVault://models/satellites/facebook_ads_insights_sat.sql
+14:28:09.060075 [debug] [MainThread]: 1603: static parser failed on satellites/facebook_ads_insights_sat.sql
+14:28:09.121677 [debug] [MainThread]: 1602: parser fallback to jinja rendering on satellites/facebook_ads_insights_sat.sql
+14:28:09.129417 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bafc80a8-49a3-427c-95e9-b611c72f354a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1622750d0>]}
+14:28:09.190977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bafc80a8-49a3-427c-95e9-b611c72f354a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x161f31760>]}
+14:28:09.191240 [info ] [MainThread]: Found 10 models, 9 tests, 0 snapshots, 0 analyses, 545 macros, 0 operations, 0 seed files, 2 sources, 0 exposures, 0 metrics
+14:28:09.191451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bafc80a8-49a3-427c-95e9-b611c72f354a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x161f31790>]}
+14:28:09.192334 [info ] [MainThread]: 
+14:28:09.192671 [debug] [MainThread]: Acquiring new snowflake connection "master"
+14:28:09.193164 [debug] [ThreadPool]: Acquiring new snowflake connection "list_BLINKIST_DEV"
+14:28:09.201894 [debug] [ThreadPool]: Using snowflake connection "list_BLINKIST_DEV"
+14:28:09.202037 [debug] [ThreadPool]: On list_BLINKIST_DEV: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "connection_name": "list_BLINKIST_DEV"} */
+
+    show terse schemas in database BLINKIST_DEV
+    limit 10000
+14:28:09.202151 [debug] [ThreadPool]: Opening a new connection, currently in state init
+14:28:10.517172 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 1.31 seconds
+14:28:10.521067 [debug] [ThreadPool]: On list_BLINKIST_DEV: Close
+14:28:10.866375 [debug] [ThreadPool]: Acquiring new snowflake connection "list_BLINKIST_DEV_hackday"
+14:28:10.878754 [debug] [ThreadPool]: Using snowflake connection "list_BLINKIST_DEV_hackday"
+14:28:10.879015 [debug] [ThreadPool]: On list_BLINKIST_DEV_hackday: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "connection_name": "list_BLINKIST_DEV_hackday"} */
+
+    show terse objects in BLINKIST_DEV.hackday
+14:28:10.879217 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+14:28:12.127003 [debug] [ThreadPool]: SQL status: SUCCESS 11 in 1.25 seconds
+14:28:12.132487 [debug] [ThreadPool]: On list_BLINKIST_DEV_hackday: Close
+14:28:12.501763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bafc80a8-49a3-427c-95e9-b611c72f354a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x161def520>]}
+14:28:12.503124 [info ] [MainThread]: Concurrency: 4 threads (target='hackday')
+14:28:12.503856 [info ] [MainThread]: 
+14:28:12.510757 [debug] [Thread-1  ]: Began running node model.HackdayVault.facebook_ads_insights_sat
+14:28:12.511315 [info ] [Thread-1  ]: 1 of 1 START view model hackday.facebook_ads_insights_sat ...................... [RUN]
+14:28:12.512029 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.HackdayVault.facebook_ads_insights_sat"
+14:28:12.512268 [debug] [Thread-1  ]: Began compiling node model.HackdayVault.facebook_ads_insights_sat
+14:28:12.512501 [debug] [Thread-1  ]: Compiling model.HackdayVault.facebook_ads_insights_sat
+14:28:12.533278 [debug] [Thread-1  ]: Writing injected SQL for node "model.HackdayVault.facebook_ads_insights_sat"
+14:28:12.534316 [debug] [Thread-1  ]: finished collecting timing info
+14:28:12.534525 [debug] [Thread-1  ]: Began executing node model.HackdayVault.facebook_ads_insights_sat
+14:28:12.557878 [debug] [Thread-1  ]: Writing runtime SQL for node "model.HackdayVault.facebook_ads_insights_sat"
+14:28:12.558936 [debug] [Thread-1  ]: Using snowflake connection "model.HackdayVault.facebook_ads_insights_sat"
+14:28:12.559077 [debug] [Thread-1  ]: On model.HackdayVault.facebook_ads_insights_sat: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "node_id": "model.HackdayVault.facebook_ads_insights_sat"} */
+
+  create or replace  view BLINKIST_DEV.hackday.facebook_ads_insights_sat
+  
+   as (
+    
+
+-- Generated by dbtvault.
+
+WITH source_data AS (
+    SELECT a."FACEBOOK_ADS_INSIGHTS_HK", a."DATE", a."COUNTRY", a."SPEND", a."AD_ID", a."_FIVETRAN_SYNCED", a."RECORD_SOURCE"
+    FROM BLINKIST_DEV.hackday.facebook_ads_insights_staging_hashed AS a
+    WHERE a."FACEBOOK_ADS_INSIGHTS_HK" IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage."FACEBOOK_ADS_INSIGHTS_HK", stage."DATE", stage."COUNTRY", stage."SPEND", stage."AD_ID", stage."_FIVETRAN_SYNCED", stage."RECORD_SOURCE"
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert
+  );
+14:28:12.559188 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+14:28:14.486523 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.93 seconds
+14:28:14.499024 [debug] [Thread-1  ]: finished collecting timing info
+14:28:14.499520 [debug] [Thread-1  ]: On model.HackdayVault.facebook_ads_insights_sat: Close
+14:28:14.894692 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bafc80a8-49a3-427c-95e9-b611c72f354a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x161def430>]}
+14:28:14.895533 [info ] [Thread-1  ]: 1 of 1 OK created view model hackday.facebook_ads_insights_sat ................. [[32mSUCCESS 1[0m in 2.38s]
+14:28:14.896187 [debug] [Thread-1  ]: Finished running node model.HackdayVault.facebook_ads_insights_sat
+14:28:14.897610 [debug] [MainThread]: Acquiring new snowflake connection "master"
+14:28:14.898108 [info ] [MainThread]: 
+14:28:14.898397 [info ] [MainThread]: Finished running 1 view model in 5.71s.
+14:28:14.898632 [debug] [MainThread]: Connection 'master' was properly closed.
+14:28:14.898758 [debug] [MainThread]: Connection 'model.HackdayVault.facebook_ads_insights_sat' was properly closed.
+14:28:14.976653 [info ] [MainThread]: 
+14:28:14.977210 [info ] [MainThread]: [32mCompleted successfully[0m
+14:28:14.977641 [info ] [MainThread]: 
+14:28:14.977993 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+14:28:14.978451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x161f315e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x161f31ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1626a83a0>]}
