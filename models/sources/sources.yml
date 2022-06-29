@@ -1,0 +1,40 @@
+
+version: 2
+
+sources:
+  - name: fivetran_facebook_ads
+    database: FIVETRAN_DATABASE
+    schema: facebook_ads
+    loader: Fivetran
+    loaded_at_field: _fivetran_synced
+    tags: ["facebook"]
+
+    tables:
+      - name: account_history
+        description: Snapshot of table holding ad related data like country, cost, clicks, etc.
+        columns:
+          - name: _fivetran_id
+            tests:
+              - unique
+              - not_null
+
+  - name: fivetran_facebook_insights
+    database: FIVETRAN_DATABASE
+    schema: facebook
+    loader: Fivetran
+    loaded_at_field: _fivetran_synced
+    tags: ["facebook"]
+
+    tables:
+      - name: ads_insights
+        description: Table holding ad related data like country, cost, clicks, etc.
+        columns:
+          - name: ad_id
+            tests:
+              - not_null
+          - name: date
+            tests:
+              - not_null
+          - name: country
+            tests:
+              - not_null
