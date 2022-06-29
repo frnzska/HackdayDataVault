@@ -6317,3 +6317,334 @@ SELECT * FROM records_to_insert
 14:06:36.486637 [info ] [MainThread]: 
 14:06:36.486840 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
 14:06:36.487084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x117a96af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12439bb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12437cf70>]}
+
+
+============================== 2022-06-29 14:10:11.977230 | ff18151d-668c-493f-aad5-900029b06862 ==============================
+14:10:11.977263 [info ] [MainThread]: Running with dbt=1.1.0
+14:10:11.978194 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/adambekele/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['facebook_ads_insights_staging_hashed+'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+14:10:11.978312 [debug] [MainThread]: Tracking: tracking
+14:10:11.978570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15a82ce20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15a82c820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15a82c550>]}
+14:10:12.099037 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+14:10:12.099428 [debug] [MainThread]: Partial parsing: added file: HackdayVault://models/hubs/facebook_ads_insights_hub.sql
+14:10:12.106298 [debug] [MainThread]: 1603: static parser failed on hubs/facebook_ads_insights_hub.sql
+14:10:12.109138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15a9ece80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15aacb130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15aacb1c0>]}
+
+
+============================== 2022-06-29 14:10:40.008006 | 286e6f0f-58b3-4f42-ba9a-c120e132e790 ==============================
+14:10:40.008023 [info ] [MainThread]: Running with dbt=1.1.0
+14:10:40.008550 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/adambekele/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['facebook_ads_insights_staging_hashed+'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+14:10:40.008677 [debug] [MainThread]: Tracking: tracking
+14:10:40.008900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fafd250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fafdc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fae0e20>]}
+14:10:40.124959 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+14:10:40.125218 [debug] [MainThread]: Partial parsing: added file: HackdayVault://models/hubs/facebook_ads_insights_hub.sql
+14:10:40.131882 [debug] [MainThread]: 1603: static parser failed on hubs/facebook_ads_insights_hub.sql
+14:10:40.183704 [debug] [MainThread]: 1602: parser fallback to jinja rendering on hubs/facebook_ads_insights_hub.sql
+14:10:40.191472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '286e6f0f-58b3-4f42-ba9a-c120e132e790', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fe780d0>]}
+14:10:40.198149 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '286e6f0f-58b3-4f42-ba9a-c120e132e790', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12faaedf0>]}
+14:10:40.198308 [info ] [MainThread]: Found 8 models, 9 tests, 0 snapshots, 0 analyses, 545 macros, 0 operations, 0 seed files, 2 sources, 0 exposures, 0 metrics
+14:10:40.198451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '286e6f0f-58b3-4f42-ba9a-c120e132e790', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12faaee20>]}
+14:10:40.199129 [info ] [MainThread]: 
+14:10:40.199377 [debug] [MainThread]: Acquiring new snowflake connection "master"
+14:10:40.199766 [debug] [ThreadPool]: Acquiring new snowflake connection "list_BLINKIST_DEV"
+14:10:40.206725 [debug] [ThreadPool]: Using snowflake connection "list_BLINKIST_DEV"
+14:10:40.207131 [debug] [ThreadPool]: On list_BLINKIST_DEV: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "connection_name": "list_BLINKIST_DEV"} */
+
+    show terse schemas in database BLINKIST_DEV
+    limit 10000
+14:10:40.207299 [debug] [ThreadPool]: Opening a new connection, currently in state init
+14:10:41.502620 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 1.3 seconds
+14:10:41.505194 [debug] [ThreadPool]: On list_BLINKIST_DEV: Close
+14:10:41.813970 [debug] [ThreadPool]: Acquiring new snowflake connection "list_BLINKIST_DEV_hackday"
+14:10:41.825245 [debug] [ThreadPool]: Using snowflake connection "list_BLINKIST_DEV_hackday"
+14:10:41.825555 [debug] [ThreadPool]: On list_BLINKIST_DEV_hackday: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "connection_name": "list_BLINKIST_DEV_hackday"} */
+
+    show terse objects in BLINKIST_DEV.hackday
+14:10:41.825790 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+14:10:42.740704 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.91 seconds
+14:10:42.745272 [debug] [ThreadPool]: On list_BLINKIST_DEV_hackday: Close
+14:10:43.051316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '286e6f0f-58b3-4f42-ba9a-c120e132e790', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fa9d9d0>]}
+14:10:43.052709 [info ] [MainThread]: Concurrency: 4 threads (target='hackday')
+14:10:43.053323 [info ] [MainThread]: 
+14:10:43.061709 [debug] [Thread-1  ]: Began running node model.HackdayVault.facebook_ads_insights_staging_hashed
+14:10:43.062252 [info ] [Thread-1  ]: 1 of 2 START view model hackday.facebook_ads_insights_staging_hashed ........... [RUN]
+14:10:43.062942 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.HackdayVault.facebook_ads_insights_staging_hashed"
+14:10:43.063199 [debug] [Thread-1  ]: Began compiling node model.HackdayVault.facebook_ads_insights_staging_hashed
+14:10:43.063434 [debug] [Thread-1  ]: Compiling model.HackdayVault.facebook_ads_insights_staging_hashed
+14:10:43.100391 [debug] [Thread-1  ]: Using snowflake connection "model.HackdayVault.facebook_ads_insights_staging_hashed"
+14:10:43.100697 [debug] [Thread-1  ]: On model.HackdayVault.facebook_ads_insights_staging_hashed: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "node_id": "model.HackdayVault.facebook_ads_insights_staging_hashed"} */
+
+    describe table BLINKIST_DEV.hackday.facebook_ads_insights_staging_raw
+14:10:43.100835 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+14:10:44.135378 [debug] [Thread-1  ]: SQL status: SUCCESS 35 in 1.03 seconds
+14:10:44.218562 [debug] [Thread-1  ]: Using snowflake connection "model.HackdayVault.facebook_ads_insights_staging_hashed"
+14:10:44.218743 [debug] [Thread-1  ]: On model.HackdayVault.facebook_ads_insights_staging_hashed: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "node_id": "model.HackdayVault.facebook_ads_insights_staging_hashed"} */
+
+    describe table BLINKIST_DEV.hackday.facebook_ads_insights_staging_raw
+14:10:44.400607 [debug] [Thread-1  ]: SQL status: SUCCESS 35 in 0.18 seconds
+14:10:44.488988 [debug] [Thread-1  ]: Writing injected SQL for node "model.HackdayVault.facebook_ads_insights_staging_hashed"
+14:10:44.489681 [debug] [Thread-1  ]: finished collecting timing info
+14:10:44.489792 [debug] [Thread-1  ]: Began executing node model.HackdayVault.facebook_ads_insights_staging_hashed
+14:10:44.502995 [debug] [Thread-1  ]: Writing runtime SQL for node "model.HackdayVault.facebook_ads_insights_staging_hashed"
+14:10:44.505741 [debug] [Thread-1  ]: Using snowflake connection "model.HackdayVault.facebook_ads_insights_staging_hashed"
+14:10:44.505840 [debug] [Thread-1  ]: On model.HackdayVault.facebook_ads_insights_staging_hashed: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "node_id": "model.HackdayVault.facebook_ads_insights_staging_hashed"} */
+
+  create or replace  view BLINKIST_DEV.hackday.facebook_ads_insights_staging_hashed
+  
+   as (
+    
+
+
+
+
+
+
+
+-- Generated by dbtvault.
+
+
+
+WITH source_data AS (
+
+    SELECT
+
+    "AD_ID",
+    "DATE",
+    "COUNTRY",
+    "ACCOUNT_ID",
+    "ADSET_ID",
+    "CLICKS",
+    "IMPRESSIONS",
+    "INLINE_LINK_CLICKS",
+    "UNIQUE_CLICKS",
+    "UNIQUE_INLINE_LINK_CLICKS",
+    "FULL_VIEW_REACH",
+    "COST_PER_INLINE_LINK_CLICK",
+    "COST_PER_INLINE_POST_ENGAGEMENT",
+    "COST_PER_UNIQUE_CLICK",
+    "COST_PER_UNIQUE_INLINE_LINK_CLICK",
+    "COST_PER_ESTIMATED_AD_RECALLERS",
+    "SOCIAL_SPEND",
+    "UNIQUE_LINK_CLICKS_CTR",
+    "ESTIMATED_AD_RECALL_RATE",
+    "ESTIMATED_AD_RECALLERS",
+    "UNIQUE_CTR",
+    "UNIQUE_INLINE_LINK_CLICK_CTR",
+    "CPC",
+    "CPM",
+    "CPP",
+    "CTR",
+    "FREQUENCY",
+    "SPEND",
+    "ACCOUNT_NAME",
+    "AD_NAME",
+    "INLINE_LINK_CLICK_CTR",
+    "INLINE_POST_ENGAGEMENT",
+    "LOCATION",
+    "OBJECTIVE",
+    "_FIVETRAN_SYNCED"
+
+    FROM BLINKIST_DEV.hackday.facebook_ads_insights_staging_raw
+),
+
+derived_columns AS (
+
+    SELECT
+
+    "AD_ID",
+    "DATE",
+    "COUNTRY",
+    "ACCOUNT_ID",
+    "ADSET_ID",
+    "CLICKS",
+    "IMPRESSIONS",
+    "INLINE_LINK_CLICKS",
+    "UNIQUE_CLICKS",
+    "UNIQUE_INLINE_LINK_CLICKS",
+    "FULL_VIEW_REACH",
+    "COST_PER_INLINE_LINK_CLICK",
+    "COST_PER_INLINE_POST_ENGAGEMENT",
+    "COST_PER_UNIQUE_CLICK",
+    "COST_PER_UNIQUE_INLINE_LINK_CLICK",
+    "COST_PER_ESTIMATED_AD_RECALLERS",
+    "SOCIAL_SPEND",
+    "UNIQUE_LINK_CLICKS_CTR",
+    "ESTIMATED_AD_RECALL_RATE",
+    "ESTIMATED_AD_RECALLERS",
+    "UNIQUE_CTR",
+    "UNIQUE_INLINE_LINK_CLICK_CTR",
+    "CPC",
+    "CPM",
+    "CPP",
+    "CTR",
+    "FREQUENCY",
+    "SPEND",
+    "ACCOUNT_NAME",
+    "AD_NAME",
+    "INLINE_LINK_CLICK_CTR",
+    "INLINE_POST_ENGAGEMENT",
+    "LOCATION",
+    "OBJECTIVE",
+    "_FIVETRAN_SYNCED",
+    'FIVETRAN_FACEBOOK_ADS_INSIGHTS_RAW' AS "RECORD_SOURCE",
+    "COUNTRY" AS "COUNTRY_CODE"
+
+    FROM source_data
+),
+
+hashed_columns AS (
+
+    SELECT
+
+    "AD_ID",
+    "DATE",
+    "COUNTRY",
+    "ACCOUNT_ID",
+    "ADSET_ID",
+    "CLICKS",
+    "IMPRESSIONS",
+    "INLINE_LINK_CLICKS",
+    "UNIQUE_CLICKS",
+    "UNIQUE_INLINE_LINK_CLICKS",
+    "FULL_VIEW_REACH",
+    "COST_PER_INLINE_LINK_CLICK",
+    "COST_PER_INLINE_POST_ENGAGEMENT",
+    "COST_PER_UNIQUE_CLICK",
+    "COST_PER_UNIQUE_INLINE_LINK_CLICK",
+    "COST_PER_ESTIMATED_AD_RECALLERS",
+    "SOCIAL_SPEND",
+    "UNIQUE_LINK_CLICKS_CTR",
+    "ESTIMATED_AD_RECALL_RATE",
+    "ESTIMATED_AD_RECALLERS",
+    "UNIQUE_CTR",
+    "UNIQUE_INLINE_LINK_CLICK_CTR",
+    "CPC",
+    "CPM",
+    "CPP",
+    "CTR",
+    "FREQUENCY",
+    "SPEND",
+    "ACCOUNT_NAME",
+    "AD_NAME",
+    "INLINE_LINK_CLICK_CTR",
+    "INLINE_POST_ENGAGEMENT",
+    "LOCATION",
+    "OBJECTIVE",
+    "_FIVETRAN_SYNCED",
+    "RECORD_SOURCE",
+    "COUNTRY_CODE",
+
+    CAST(MD5_BINARY(NULLIF(CONCAT_WS('||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST("COUNTRY_CODE" AS VARCHAR))), ''), '^^'),
+        IFNULL(NULLIF(UPPER(TRIM(CAST("DATE" AS VARCHAR))), ''), '^^'),
+        IFNULL(NULLIF(UPPER(TRIM(CAST("AD_ID" AS VARCHAR))), ''), '^^')
+    ), '^^||^^||^^')) AS BINARY(16)) AS "FACEBOOK_ADS_INSIGHTS_HK"
+
+    FROM derived_columns
+),
+
+columns_to_select AS (
+
+    SELECT
+
+    "AD_ID",
+    "DATE",
+    "COUNTRY",
+    "ACCOUNT_ID",
+    "ADSET_ID",
+    "CLICKS",
+    "IMPRESSIONS",
+    "INLINE_LINK_CLICKS",
+    "UNIQUE_CLICKS",
+    "UNIQUE_INLINE_LINK_CLICKS",
+    "FULL_VIEW_REACH",
+    "COST_PER_INLINE_LINK_CLICK",
+    "COST_PER_INLINE_POST_ENGAGEMENT",
+    "COST_PER_UNIQUE_CLICK",
+    "COST_PER_UNIQUE_INLINE_LINK_CLICK",
+    "COST_PER_ESTIMATED_AD_RECALLERS",
+    "SOCIAL_SPEND",
+    "UNIQUE_LINK_CLICKS_CTR",
+    "ESTIMATED_AD_RECALL_RATE",
+    "ESTIMATED_AD_RECALLERS",
+    "UNIQUE_CTR",
+    "UNIQUE_INLINE_LINK_CLICK_CTR",
+    "CPC",
+    "CPM",
+    "CPP",
+    "CTR",
+    "FREQUENCY",
+    "SPEND",
+    "ACCOUNT_NAME",
+    "AD_NAME",
+    "INLINE_LINK_CLICK_CTR",
+    "INLINE_POST_ENGAGEMENT",
+    "LOCATION",
+    "OBJECTIVE",
+    "_FIVETRAN_SYNCED",
+    "RECORD_SOURCE",
+    "COUNTRY_CODE",
+    "FACEBOOK_ADS_INSIGHTS_HK"
+
+    FROM hashed_columns
+)
+
+SELECT * FROM columns_to_select
+  );
+14:10:44.923640 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.42 seconds
+14:10:44.936757 [debug] [Thread-1  ]: finished collecting timing info
+14:10:44.937155 [debug] [Thread-1  ]: On model.HackdayVault.facebook_ads_insights_staging_hashed: Close
+14:10:45.261179 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '286e6f0f-58b3-4f42-ba9a-c120e132e790', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x138272640>]}
+14:10:45.262123 [info ] [Thread-1  ]: 1 of 2 OK created view model hackday.facebook_ads_insights_staging_hashed ...... [[32mSUCCESS 1[0m in 2.20s]
+14:10:45.262998 [debug] [Thread-1  ]: Finished running node model.HackdayVault.facebook_ads_insights_staging_hashed
+14:10:45.263868 [debug] [Thread-3  ]: Began running node model.HackdayVault.facebook_ads_insights_hub
+14:10:45.264382 [info ] [Thread-3  ]: 2 of 2 START incremental model hackday.facebook_ads_insights_hub ............... [RUN]
+14:10:45.265049 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.HackdayVault.facebook_ads_insights_hub"
+14:10:45.265310 [debug] [Thread-3  ]: Began compiling node model.HackdayVault.facebook_ads_insights_hub
+14:10:45.265531 [debug] [Thread-3  ]: Compiling model.HackdayVault.facebook_ads_insights_hub
+14:10:45.281420 [debug] [Thread-3  ]: Writing injected SQL for node "model.HackdayVault.facebook_ads_insights_hub"
+14:10:45.282293 [debug] [Thread-3  ]: finished collecting timing info
+14:10:45.282524 [debug] [Thread-3  ]: Began executing node model.HackdayVault.facebook_ads_insights_hub
+14:10:45.315522 [debug] [Thread-3  ]: Writing runtime SQL for node "model.HackdayVault.facebook_ads_insights_hub"
+14:10:45.316726 [debug] [Thread-3  ]: Using snowflake connection "model.HackdayVault.facebook_ads_insights_hub"
+14:10:45.316858 [debug] [Thread-3  ]: On model.HackdayVault.facebook_ads_insights_hub: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "node_id": "model.HackdayVault.facebook_ads_insights_hub"} */
+
+
+      create or replace transient table BLINKIST_DEV.hackday.facebook_ads_insights_hub  as
+      (-- Generated by dbtvault.
+
+WITH row_rank_1 AS (
+    SELECT rr."FACEBOOK_ADS_INSIGHTS_HK", rr."AD_ID", rr."DATE", rr."COUNTRY_CODE", rr."_FIVETRAN_SYNCED", rr."RECORD_SOURCE",
+           ROW_NUMBER() OVER(
+               PARTITION BY rr."FACEBOOK_ADS_INSIGHTS_HK"
+               ORDER BY rr."_FIVETRAN_SYNCED"
+           ) AS row_number
+    FROM BLINKIST_DEV.hackday.facebook_ads_insights_staging_hashed AS rr
+    WHERE rr."FACEBOOK_ADS_INSIGHTS_HK" IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a."FACEBOOK_ADS_INSIGHTS_HK", a."AD_ID", a."DATE", a."COUNTRY_CODE", a."_FIVETRAN_SYNCED", a."RECORD_SOURCE"
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert
+      );
+14:10:45.316963 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+14:10:57.897078 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 12.58 seconds
+14:10:57.907525 [debug] [Thread-3  ]: finished collecting timing info
+14:10:57.907973 [debug] [Thread-3  ]: On model.HackdayVault.facebook_ads_insights_hub: Close
+14:10:58.223228 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '286e6f0f-58b3-4f42-ba9a-c120e132e790', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13843bbb0>]}
+14:10:58.224012 [info ] [Thread-3  ]: 2 of 2 OK created incremental model hackday.facebook_ads_insights_hub .......... [[32mSUCCESS 1[0m in 12.96s]
+14:10:58.224670 [debug] [Thread-3  ]: Finished running node model.HackdayVault.facebook_ads_insights_hub
+14:10:58.226383 [debug] [MainThread]: Acquiring new snowflake connection "master"
+14:10:58.227101 [info ] [MainThread]: 
+14:10:58.227707 [info ] [MainThread]: Finished running 1 view model, 1 incremental model in 18.03s.
+14:10:58.228208 [debug] [MainThread]: Connection 'master' was properly closed.
+14:10:58.228460 [debug] [MainThread]: Connection 'model.HackdayVault.facebook_ads_insights_staging_hashed' was properly closed.
+14:10:58.228697 [debug] [MainThread]: Connection 'model.HackdayVault.facebook_ads_insights_hub' was properly closed.
+14:10:58.294106 [info ] [MainThread]: 
+14:10:58.294310 [info ] [MainThread]: [32mCompleted successfully[0m
+14:10:58.294463 [info ] [MainThread]: 
+14:10:58.294604 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+14:10:58.294858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fe8b580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1384a9490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1384a9250>]}
