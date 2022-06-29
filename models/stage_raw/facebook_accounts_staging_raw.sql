@@ -1,3 +1,3 @@
 SELECT
     *
-FROM {{ source('fivetran_facebook_ads', 'account_history')}}
+FROM {{ ref('snapshot_facebook_account_history') }}
