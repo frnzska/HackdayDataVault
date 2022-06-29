@@ -5777,3 +5777,543 @@ SELECT * FROM columns_to_select
 13:56:25.141243 [info ] [MainThread]: 
 13:56:25.141406 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
 13:56:25.184159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x126321880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1263218e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x126321a00>]}
+
+
+============================== 2022-06-29 14:06:26.306493 | 357eeaac-f7b1-4e35-ac6b-5f64fac2f4d3 ==============================
+14:06:26.306523 [info ] [MainThread]: Running with dbt=1.1.0
+14:06:26.307413 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/adambekele/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['facebook_accounts_staging_raw+'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+14:06:26.307544 [debug] [MainThread]: Tracking: tracking
+14:06:26.307796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x117a4f5e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x117a4f850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x117a4f9a0>]}
+14:06:26.435124 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+14:06:26.435373 [debug] [MainThread]: Partial parsing: added file: HackdayVault://models/hubs/facebook_accounts_hub.sql
+14:06:26.442226 [debug] [MainThread]: 1603: static parser failed on hubs/facebook_accounts_hub.sql
+14:06:26.494460 [debug] [MainThread]: 1602: parser fallback to jinja rendering on hubs/facebook_accounts_hub.sql
+14:06:26.502825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '357eeaac-f7b1-4e35-ac6b-5f64fac2f4d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x117daf0d0>]}
+14:06:26.510412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '357eeaac-f7b1-4e35-ac6b-5f64fac2f4d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x117b93c70>]}
+14:06:26.510621 [info ] [MainThread]: Found 7 models, 9 tests, 0 snapshots, 0 analyses, 545 macros, 0 operations, 0 seed files, 2 sources, 0 exposures, 0 metrics
+14:06:26.510783 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '357eeaac-f7b1-4e35-ac6b-5f64fac2f4d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x117b93c40>]}
+14:06:26.511549 [info ] [MainThread]: 
+14:06:26.511848 [debug] [MainThread]: Acquiring new snowflake connection "master"
+14:06:26.512378 [debug] [ThreadPool]: Acquiring new snowflake connection "list_BLINKIST_DEV"
+14:06:26.519044 [debug] [ThreadPool]: Using snowflake connection "list_BLINKIST_DEV"
+14:06:26.519235 [debug] [ThreadPool]: On list_BLINKIST_DEV: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "connection_name": "list_BLINKIST_DEV"} */
+
+    show terse schemas in database BLINKIST_DEV
+    limit 10000
+14:06:26.519334 [debug] [ThreadPool]: Opening a new connection, currently in state init
+14:06:27.871223 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 1.35 seconds
+14:06:27.876384 [debug] [ThreadPool]: On list_BLINKIST_DEV: Close
+14:06:28.177432 [debug] [ThreadPool]: Acquiring new snowflake connection "list_BLINKIST_DEV_hackday"
+14:06:28.187991 [debug] [ThreadPool]: Using snowflake connection "list_BLINKIST_DEV_hackday"
+14:06:28.188284 [debug] [ThreadPool]: On list_BLINKIST_DEV_hackday: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "connection_name": "list_BLINKIST_DEV_hackday"} */
+
+    show terse objects in BLINKIST_DEV.hackday
+14:06:28.188490 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+14:06:29.261929 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 1.07 seconds
+14:06:29.265073 [debug] [ThreadPool]: On list_BLINKIST_DEV_hackday: Close
+14:06:29.646475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '357eeaac-f7b1-4e35-ac6b-5f64fac2f4d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1040a7be0>]}
+14:06:29.647475 [info ] [MainThread]: Concurrency: 4 threads (target='hackday')
+14:06:29.647905 [info ] [MainThread]: 
+14:06:29.655281 [debug] [Thread-1  ]: Began running node model.HackdayVault.facebook_accounts_staging_raw
+14:06:29.655934 [info ] [Thread-1  ]: 1 of 3 START view model hackday.facebook_accounts_staging_raw .................. [RUN]
+14:06:29.656688 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.HackdayVault.facebook_accounts_staging_raw"
+14:06:29.657014 [debug] [Thread-1  ]: Began compiling node model.HackdayVault.facebook_accounts_staging_raw
+14:06:29.657373 [debug] [Thread-1  ]: Compiling model.HackdayVault.facebook_accounts_staging_raw
+14:06:29.662157 [debug] [Thread-1  ]: Writing injected SQL for node "model.HackdayVault.facebook_accounts_staging_raw"
+14:06:29.663771 [debug] [Thread-1  ]: finished collecting timing info
+14:06:29.664055 [debug] [Thread-1  ]: Began executing node model.HackdayVault.facebook_accounts_staging_raw
+14:06:29.692331 [debug] [Thread-1  ]: Writing runtime SQL for node "model.HackdayVault.facebook_accounts_staging_raw"
+14:06:29.694704 [debug] [Thread-1  ]: Using snowflake connection "model.HackdayVault.facebook_accounts_staging_raw"
+14:06:29.694971 [debug] [Thread-1  ]: On model.HackdayVault.facebook_accounts_staging_raw: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "node_id": "model.HackdayVault.facebook_accounts_staging_raw"} */
+
+  create or replace  view BLINKIST_DEV.hackday.facebook_accounts_staging_raw
+  
+   as (
+    SELECT
+    *
+FROM FIVETRAN_DATABASE.facebook_ads.account_history
+  );
+14:06:29.695113 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+14:06:30.736402 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.04 seconds
+14:06:30.748165 [debug] [Thread-1  ]: finished collecting timing info
+14:06:30.748634 [debug] [Thread-1  ]: On model.HackdayVault.facebook_accounts_staging_raw: Close
+14:06:31.048462 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '357eeaac-f7b1-4e35-ac6b-5f64fac2f4d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x117a96160>]}
+14:06:31.049402 [info ] [Thread-1  ]: 1 of 3 OK created view model hackday.facebook_accounts_staging_raw ............. [[32mSUCCESS 1[0m in 1.39s]
+14:06:31.050051 [debug] [Thread-1  ]: Finished running node model.HackdayVault.facebook_accounts_staging_raw
+14:06:31.051087 [debug] [Thread-3  ]: Began running node model.HackdayVault.facebook_accounts_staging_hashed
+14:06:31.051770 [info ] [Thread-3  ]: 2 of 3 START view model hackday.facebook_accounts_staging_hashed ............... [RUN]
+14:06:31.053457 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.HackdayVault.facebook_accounts_staging_hashed"
+14:06:31.054072 [debug] [Thread-3  ]: Began compiling node model.HackdayVault.facebook_accounts_staging_hashed
+14:06:31.055806 [debug] [Thread-3  ]: Compiling model.HackdayVault.facebook_accounts_staging_hashed
+14:06:31.093315 [debug] [Thread-3  ]: Using snowflake connection "model.HackdayVault.facebook_accounts_staging_hashed"
+14:06:31.093563 [debug] [Thread-3  ]: On model.HackdayVault.facebook_accounts_staging_hashed: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "node_id": "model.HackdayVault.facebook_accounts_staging_hashed"} */
+
+    describe table BLINKIST_DEV.hackday.facebook_accounts_staging_raw
+14:06:31.093663 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+14:06:32.159385 [debug] [Thread-3  ]: SQL status: SUCCESS 83 in 1.07 seconds
+14:06:32.255988 [debug] [Thread-3  ]: Using snowflake connection "model.HackdayVault.facebook_accounts_staging_hashed"
+14:06:32.256160 [debug] [Thread-3  ]: On model.HackdayVault.facebook_accounts_staging_hashed: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "node_id": "model.HackdayVault.facebook_accounts_staging_hashed"} */
+
+    describe table BLINKIST_DEV.hackday.facebook_accounts_staging_raw
+14:06:32.440894 [debug] [Thread-3  ]: SQL status: SUCCESS 83 in 0.18 seconds
+14:06:32.562525 [debug] [Thread-3  ]: Writing injected SQL for node "model.HackdayVault.facebook_accounts_staging_hashed"
+14:06:32.563858 [debug] [Thread-3  ]: finished collecting timing info
+14:06:32.563955 [debug] [Thread-3  ]: Began executing node model.HackdayVault.facebook_accounts_staging_hashed
+14:06:32.565517 [debug] [Thread-3  ]: Writing runtime SQL for node "model.HackdayVault.facebook_accounts_staging_hashed"
+14:06:32.568975 [debug] [Thread-3  ]: Using snowflake connection "model.HackdayVault.facebook_accounts_staging_hashed"
+14:06:32.569056 [debug] [Thread-3  ]: On model.HackdayVault.facebook_accounts_staging_hashed: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "node_id": "model.HackdayVault.facebook_accounts_staging_hashed"} */
+
+  create or replace  view BLINKIST_DEV.hackday.facebook_accounts_staging_hashed
+  
+   as (
+    
+
+
+
+
+
+
+
+-- Generated by dbtvault.
+
+
+
+WITH source_data AS (
+
+    SELECT
+
+    "_FIVETRAN_ID",
+    "AGE",
+    "AMOUNT_SPENT",
+    "BALANCE",
+    "BUSINESS_CITY",
+    "BUSINESS_COUNTRY_CODE",
+    "BUSINESS_NAME",
+    "BUSINESS_STATE",
+    "BUSINESS_STREET",
+    "BUSINESS_STREET_2",
+    "BUSINESS_ZIP",
+    "CAN_CREATE_BRAND_LIFT_STUDY",
+    "CREATED_TIME",
+    "CURRENCY",
+    "END_ADVERTISER",
+    "END_ADVERTISER_NAME",
+    "HAS_ADVERTISER_OPTED_IN_ODAX",
+    "HAS_MIGRATED_PERMISSIONS",
+    "IO_NUMBER",
+    "IS_ATTRIBUTION_SPEC_SYSTEM_DEFAULT",
+    "IS_DIRECT_DEALS_ENABLED",
+    "IS_IN_3_DS_AUTHORIZATION_ENABLED_MARKET",
+    "IS_NOTIFICATIONS_ENABLED",
+    "IS_PERSONAL",
+    "IS_PREPAY_ACCOUNT",
+    "IS_TAX_ID_REQUIRED",
+    "MEDIA_AGENCY",
+    "MIN_CAMPAIGN_GROUP_SPEND_CAP",
+    "MIN_DAILY_BUDGET",
+    "NAME",
+    "NEXT_BILL_DATE",
+    "OFFSITE_PIXELS_TOS_ACCEPTED",
+    "OWNER",
+    "PARTNER",
+    "SALESFORCE_INVOICE_GROUP_ID",
+    "SPEND_CAP",
+    "TAX_ID",
+    "TAX_ID_TYPE",
+    "TIMEZONE_ID",
+    "TIMEZONE_NAME",
+    "TIMEZONE_OFFSET_HOURS_UTC",
+    "ACCOUNT_STATUS",
+    "DISABLE_REASON",
+    "TAX_ID_STATUS",
+    "AGENCY_CLIENT_DECLARATION_AGENCY_REPRESENTING_CLIENT",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_BASED_IN_FRANCE",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_CITY",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_COUNTRY_CODE",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_EMAIL_ADDRESS",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_NAME",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_POSTAL_CODE",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_PROVINCE",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_STREET",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_STREET_2",
+    "AGENCY_CLIENT_DECLARATION_HAS_WRITTEN_MANDATE_FROM_ADVERTISER",
+    "AGENCY_CLIENT_DECLARATION_IS_CLIENT_PAYING_INVOICES",
+    "BUSINESS_MANAGER_BLOCK_OFFLINE_ANALYTICS",
+    "BUSINESS_MANAGER_CREATED_BY",
+    "BUSINESS_MANAGER_CREATED_TIME",
+    "BUSINESS_MANAGER_EXTENDED_UPDATED_TIME",
+    "BUSINESS_MANAGER_IS_HIDDEN",
+    "BUSINESS_MANAGER_LINK",
+    "BUSINESS_MANAGER_NAME",
+    "BUSINESS_MANAGER_PAYMENT_ACCOUNT_ID",
+    "BUSINESS_MANAGER_PRIMARY_PAGE",
+    "BUSINESS_MANAGER_PROFILE_PICTURE_URI",
+    "BUSINESS_MANAGER_TIMEZONE_ID",
+    "BUSINESS_MANAGER_TWO_FACTOR_TYPE",
+    "BUSINESS_MANAGER_UPDATED_BY",
+    "BUSINESS_MANAGER_UPDATE_TIME",
+    "BUSINESS_MANAGER_VERIFICATION_STATUS",
+    "BUSINESS_MANAGER_VERTICAL",
+    "BUSINESS_MANAGER_VERTICAL_ID",
+    "BUSINESS_MANAGER_MANAGER_ID",
+    "EXTENDED_CREDIT_INVOICE_GROUP_ID",
+    "EXTENDED_CREDIT_INVOICE_GROUP_AUTO_ENROLL",
+    "EXTENDED_CREDIT_INVOICE_GROUP_CUSTOMER_PO_NUMBER",
+    "EXTENDED_CREDIT_INVOICE_GROUP_EMAIL",
+    "EXTENDED_CREDIT_INVOICE_GROUP_EMAILS",
+    "EXTENDED_CREDIT_INVOICE_GROUP_NAME",
+    "CAPABILITIES",
+    "ID",
+    "_FIVETRAN_SYNCED"
+
+    FROM BLINKIST_DEV.hackday.facebook_accounts_staging_raw
+),
+
+derived_columns AS (
+
+    SELECT
+
+    "_FIVETRAN_ID",
+    "AGE",
+    "AMOUNT_SPENT",
+    "BALANCE",
+    "BUSINESS_CITY",
+    "BUSINESS_COUNTRY_CODE",
+    "BUSINESS_NAME",
+    "BUSINESS_STATE",
+    "BUSINESS_STREET",
+    "BUSINESS_STREET_2",
+    "BUSINESS_ZIP",
+    "CAN_CREATE_BRAND_LIFT_STUDY",
+    "CREATED_TIME",
+    "CURRENCY",
+    "END_ADVERTISER",
+    "END_ADVERTISER_NAME",
+    "HAS_ADVERTISER_OPTED_IN_ODAX",
+    "HAS_MIGRATED_PERMISSIONS",
+    "IO_NUMBER",
+    "IS_ATTRIBUTION_SPEC_SYSTEM_DEFAULT",
+    "IS_DIRECT_DEALS_ENABLED",
+    "IS_IN_3_DS_AUTHORIZATION_ENABLED_MARKET",
+    "IS_NOTIFICATIONS_ENABLED",
+    "IS_PERSONAL",
+    "IS_PREPAY_ACCOUNT",
+    "IS_TAX_ID_REQUIRED",
+    "MEDIA_AGENCY",
+    "MIN_CAMPAIGN_GROUP_SPEND_CAP",
+    "MIN_DAILY_BUDGET",
+    "NAME",
+    "NEXT_BILL_DATE",
+    "OFFSITE_PIXELS_TOS_ACCEPTED",
+    "OWNER",
+    "PARTNER",
+    "SALESFORCE_INVOICE_GROUP_ID",
+    "SPEND_CAP",
+    "TAX_ID",
+    "TAX_ID_TYPE",
+    "TIMEZONE_ID",
+    "TIMEZONE_NAME",
+    "TIMEZONE_OFFSET_HOURS_UTC",
+    "ACCOUNT_STATUS",
+    "DISABLE_REASON",
+    "TAX_ID_STATUS",
+    "AGENCY_CLIENT_DECLARATION_AGENCY_REPRESENTING_CLIENT",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_BASED_IN_FRANCE",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_CITY",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_COUNTRY_CODE",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_EMAIL_ADDRESS",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_NAME",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_POSTAL_CODE",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_PROVINCE",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_STREET",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_STREET_2",
+    "AGENCY_CLIENT_DECLARATION_HAS_WRITTEN_MANDATE_FROM_ADVERTISER",
+    "AGENCY_CLIENT_DECLARATION_IS_CLIENT_PAYING_INVOICES",
+    "BUSINESS_MANAGER_BLOCK_OFFLINE_ANALYTICS",
+    "BUSINESS_MANAGER_CREATED_BY",
+    "BUSINESS_MANAGER_CREATED_TIME",
+    "BUSINESS_MANAGER_EXTENDED_UPDATED_TIME",
+    "BUSINESS_MANAGER_IS_HIDDEN",
+    "BUSINESS_MANAGER_LINK",
+    "BUSINESS_MANAGER_NAME",
+    "BUSINESS_MANAGER_PAYMENT_ACCOUNT_ID",
+    "BUSINESS_MANAGER_PRIMARY_PAGE",
+    "BUSINESS_MANAGER_PROFILE_PICTURE_URI",
+    "BUSINESS_MANAGER_TIMEZONE_ID",
+    "BUSINESS_MANAGER_TWO_FACTOR_TYPE",
+    "BUSINESS_MANAGER_UPDATED_BY",
+    "BUSINESS_MANAGER_UPDATE_TIME",
+    "BUSINESS_MANAGER_VERIFICATION_STATUS",
+    "BUSINESS_MANAGER_VERTICAL",
+    "BUSINESS_MANAGER_VERTICAL_ID",
+    "BUSINESS_MANAGER_MANAGER_ID",
+    "EXTENDED_CREDIT_INVOICE_GROUP_ID",
+    "EXTENDED_CREDIT_INVOICE_GROUP_AUTO_ENROLL",
+    "EXTENDED_CREDIT_INVOICE_GROUP_CUSTOMER_PO_NUMBER",
+    "EXTENDED_CREDIT_INVOICE_GROUP_EMAIL",
+    "EXTENDED_CREDIT_INVOICE_GROUP_EMAILS",
+    "EXTENDED_CREDIT_INVOICE_GROUP_NAME",
+    "CAPABILITIES",
+    "ID",
+    "_FIVETRAN_SYNCED",
+    'FIVETRAN_FACEBOOK_ACCOUNTS_RAW' AS "RECORD_SOURCE",
+    "CURRENCY" AS "CURRENCY_CODE",
+    "ID" AS "ACCOUNT_ID"
+
+    FROM source_data
+),
+
+hashed_columns AS (
+
+    SELECT
+
+    "_FIVETRAN_ID",
+    "AGE",
+    "AMOUNT_SPENT",
+    "BALANCE",
+    "BUSINESS_CITY",
+    "BUSINESS_COUNTRY_CODE",
+    "BUSINESS_NAME",
+    "BUSINESS_STATE",
+    "BUSINESS_STREET",
+    "BUSINESS_STREET_2",
+    "BUSINESS_ZIP",
+    "CAN_CREATE_BRAND_LIFT_STUDY",
+    "CREATED_TIME",
+    "CURRENCY",
+    "END_ADVERTISER",
+    "END_ADVERTISER_NAME",
+    "HAS_ADVERTISER_OPTED_IN_ODAX",
+    "HAS_MIGRATED_PERMISSIONS",
+    "IO_NUMBER",
+    "IS_ATTRIBUTION_SPEC_SYSTEM_DEFAULT",
+    "IS_DIRECT_DEALS_ENABLED",
+    "IS_IN_3_DS_AUTHORIZATION_ENABLED_MARKET",
+    "IS_NOTIFICATIONS_ENABLED",
+    "IS_PERSONAL",
+    "IS_PREPAY_ACCOUNT",
+    "IS_TAX_ID_REQUIRED",
+    "MEDIA_AGENCY",
+    "MIN_CAMPAIGN_GROUP_SPEND_CAP",
+    "MIN_DAILY_BUDGET",
+    "NAME",
+    "NEXT_BILL_DATE",
+    "OFFSITE_PIXELS_TOS_ACCEPTED",
+    "OWNER",
+    "PARTNER",
+    "SALESFORCE_INVOICE_GROUP_ID",
+    "SPEND_CAP",
+    "TAX_ID",
+    "TAX_ID_TYPE",
+    "TIMEZONE_ID",
+    "TIMEZONE_NAME",
+    "TIMEZONE_OFFSET_HOURS_UTC",
+    "ACCOUNT_STATUS",
+    "DISABLE_REASON",
+    "TAX_ID_STATUS",
+    "AGENCY_CLIENT_DECLARATION_AGENCY_REPRESENTING_CLIENT",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_BASED_IN_FRANCE",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_CITY",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_COUNTRY_CODE",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_EMAIL_ADDRESS",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_NAME",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_POSTAL_CODE",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_PROVINCE",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_STREET",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_STREET_2",
+    "AGENCY_CLIENT_DECLARATION_HAS_WRITTEN_MANDATE_FROM_ADVERTISER",
+    "AGENCY_CLIENT_DECLARATION_IS_CLIENT_PAYING_INVOICES",
+    "BUSINESS_MANAGER_BLOCK_OFFLINE_ANALYTICS",
+    "BUSINESS_MANAGER_CREATED_BY",
+    "BUSINESS_MANAGER_CREATED_TIME",
+    "BUSINESS_MANAGER_EXTENDED_UPDATED_TIME",
+    "BUSINESS_MANAGER_IS_HIDDEN",
+    "BUSINESS_MANAGER_LINK",
+    "BUSINESS_MANAGER_NAME",
+    "BUSINESS_MANAGER_PAYMENT_ACCOUNT_ID",
+    "BUSINESS_MANAGER_PRIMARY_PAGE",
+    "BUSINESS_MANAGER_PROFILE_PICTURE_URI",
+    "BUSINESS_MANAGER_TIMEZONE_ID",
+    "BUSINESS_MANAGER_TWO_FACTOR_TYPE",
+    "BUSINESS_MANAGER_UPDATED_BY",
+    "BUSINESS_MANAGER_UPDATE_TIME",
+    "BUSINESS_MANAGER_VERIFICATION_STATUS",
+    "BUSINESS_MANAGER_VERTICAL",
+    "BUSINESS_MANAGER_VERTICAL_ID",
+    "BUSINESS_MANAGER_MANAGER_ID",
+    "EXTENDED_CREDIT_INVOICE_GROUP_ID",
+    "EXTENDED_CREDIT_INVOICE_GROUP_AUTO_ENROLL",
+    "EXTENDED_CREDIT_INVOICE_GROUP_CUSTOMER_PO_NUMBER",
+    "EXTENDED_CREDIT_INVOICE_GROUP_EMAIL",
+    "EXTENDED_CREDIT_INVOICE_GROUP_EMAILS",
+    "EXTENDED_CREDIT_INVOICE_GROUP_NAME",
+    "CAPABILITIES",
+    "ID",
+    "_FIVETRAN_SYNCED",
+    "RECORD_SOURCE",
+    "CURRENCY_CODE",
+    "ACCOUNT_ID",
+
+    CAST(MD5_BINARY(NULLIF(CONCAT_WS('||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST("ACCOUNT_ID" AS VARCHAR))), ''), '^^')
+    ), '^^')) AS BINARY(16)) AS "FACEBOOK_ACCOUNTS_HK"
+
+    FROM derived_columns
+),
+
+columns_to_select AS (
+
+    SELECT
+
+    "_FIVETRAN_ID",
+    "AGE",
+    "AMOUNT_SPENT",
+    "BALANCE",
+    "BUSINESS_CITY",
+    "BUSINESS_COUNTRY_CODE",
+    "BUSINESS_NAME",
+    "BUSINESS_STATE",
+    "BUSINESS_STREET",
+    "BUSINESS_STREET_2",
+    "BUSINESS_ZIP",
+    "CAN_CREATE_BRAND_LIFT_STUDY",
+    "CREATED_TIME",
+    "CURRENCY",
+    "END_ADVERTISER",
+    "END_ADVERTISER_NAME",
+    "HAS_ADVERTISER_OPTED_IN_ODAX",
+    "HAS_MIGRATED_PERMISSIONS",
+    "IO_NUMBER",
+    "IS_ATTRIBUTION_SPEC_SYSTEM_DEFAULT",
+    "IS_DIRECT_DEALS_ENABLED",
+    "IS_IN_3_DS_AUTHORIZATION_ENABLED_MARKET",
+    "IS_NOTIFICATIONS_ENABLED",
+    "IS_PERSONAL",
+    "IS_PREPAY_ACCOUNT",
+    "IS_TAX_ID_REQUIRED",
+    "MEDIA_AGENCY",
+    "MIN_CAMPAIGN_GROUP_SPEND_CAP",
+    "MIN_DAILY_BUDGET",
+    "NAME",
+    "NEXT_BILL_DATE",
+    "OFFSITE_PIXELS_TOS_ACCEPTED",
+    "OWNER",
+    "PARTNER",
+    "SALESFORCE_INVOICE_GROUP_ID",
+    "SPEND_CAP",
+    "TAX_ID",
+    "TAX_ID_TYPE",
+    "TIMEZONE_ID",
+    "TIMEZONE_NAME",
+    "TIMEZONE_OFFSET_HOURS_UTC",
+    "ACCOUNT_STATUS",
+    "DISABLE_REASON",
+    "TAX_ID_STATUS",
+    "AGENCY_CLIENT_DECLARATION_AGENCY_REPRESENTING_CLIENT",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_BASED_IN_FRANCE",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_CITY",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_COUNTRY_CODE",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_EMAIL_ADDRESS",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_NAME",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_POSTAL_CODE",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_PROVINCE",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_STREET",
+    "AGENCY_CLIENT_DECLARATION_CLIENT_STREET_2",
+    "AGENCY_CLIENT_DECLARATION_HAS_WRITTEN_MANDATE_FROM_ADVERTISER",
+    "AGENCY_CLIENT_DECLARATION_IS_CLIENT_PAYING_INVOICES",
+    "BUSINESS_MANAGER_BLOCK_OFFLINE_ANALYTICS",
+    "BUSINESS_MANAGER_CREATED_BY",
+    "BUSINESS_MANAGER_CREATED_TIME",
+    "BUSINESS_MANAGER_EXTENDED_UPDATED_TIME",
+    "BUSINESS_MANAGER_IS_HIDDEN",
+    "BUSINESS_MANAGER_LINK",
+    "BUSINESS_MANAGER_NAME",
+    "BUSINESS_MANAGER_PAYMENT_ACCOUNT_ID",
+    "BUSINESS_MANAGER_PRIMARY_PAGE",
+    "BUSINESS_MANAGER_PROFILE_PICTURE_URI",
+    "BUSINESS_MANAGER_TIMEZONE_ID",
+    "BUSINESS_MANAGER_TWO_FACTOR_TYPE",
+    "BUSINESS_MANAGER_UPDATED_BY",
+    "BUSINESS_MANAGER_UPDATE_TIME",
+    "BUSINESS_MANAGER_VERIFICATION_STATUS",
+    "BUSINESS_MANAGER_VERTICAL",
+    "BUSINESS_MANAGER_VERTICAL_ID",
+    "BUSINESS_MANAGER_MANAGER_ID",
+    "EXTENDED_CREDIT_INVOICE_GROUP_ID",
+    "EXTENDED_CREDIT_INVOICE_GROUP_AUTO_ENROLL",
+    "EXTENDED_CREDIT_INVOICE_GROUP_CUSTOMER_PO_NUMBER",
+    "EXTENDED_CREDIT_INVOICE_GROUP_EMAIL",
+    "EXTENDED_CREDIT_INVOICE_GROUP_EMAILS",
+    "EXTENDED_CREDIT_INVOICE_GROUP_NAME",
+    "CAPABILITIES",
+    "ID",
+    "_FIVETRAN_SYNCED",
+    "RECORD_SOURCE",
+    "CURRENCY_CODE",
+    "ACCOUNT_ID",
+    "FACEBOOK_ACCOUNTS_HK"
+
+    FROM hashed_columns
+)
+
+SELECT * FROM columns_to_select
+  );
+14:06:33.007424 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 0.44 seconds
+14:06:33.011828 [debug] [Thread-3  ]: finished collecting timing info
+14:06:33.012525 [debug] [Thread-3  ]: On model.HackdayVault.facebook_accounts_staging_hashed: Close
+14:06:33.323696 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '357eeaac-f7b1-4e35-ac6b-5f64fac2f4d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1243b8430>]}
+14:06:33.325554 [info ] [Thread-3  ]: 2 of 3 OK created view model hackday.facebook_accounts_staging_hashed .......... [[32mSUCCESS 1[0m in 2.27s]
+14:06:33.327277 [debug] [Thread-3  ]: Finished running node model.HackdayVault.facebook_accounts_staging_hashed
+14:06:33.329036 [debug] [Thread-2  ]: Began running node model.HackdayVault.facebook_accounts_hub
+14:06:33.330065 [info ] [Thread-2  ]: 3 of 3 START incremental model hackday.facebook_accounts_hub ................... [RUN]
+14:06:33.331662 [debug] [Thread-2  ]: Acquiring new snowflake connection "model.HackdayVault.facebook_accounts_hub"
+14:06:33.332319 [debug] [Thread-2  ]: Began compiling node model.HackdayVault.facebook_accounts_hub
+14:06:33.333016 [debug] [Thread-2  ]: Compiling model.HackdayVault.facebook_accounts_hub
+14:06:33.351906 [debug] [Thread-2  ]: Writing injected SQL for node "model.HackdayVault.facebook_accounts_hub"
+14:06:33.353477 [debug] [Thread-2  ]: finished collecting timing info
+14:06:33.353710 [debug] [Thread-2  ]: Began executing node model.HackdayVault.facebook_accounts_hub
+14:06:33.387053 [debug] [Thread-2  ]: Writing runtime SQL for node "model.HackdayVault.facebook_accounts_hub"
+14:06:33.388486 [debug] [Thread-2  ]: Using snowflake connection "model.HackdayVault.facebook_accounts_hub"
+14:06:33.388619 [debug] [Thread-2  ]: On model.HackdayVault.facebook_accounts_hub: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "default", "target_name": "hackday", "node_id": "model.HackdayVault.facebook_accounts_hub"} */
+
+
+      create or replace transient table BLINKIST_DEV.hackday.facebook_accounts_hub  as
+      (-- Generated by dbtvault.
+
+WITH row_rank_1 AS (
+    SELECT rr."FACEBOOK_ACCOUNTS_HK", rr."ACCOUNT_ID", rr."_FIVETRAN_SYNCED", rr."RECORD_SOURCE",
+           ROW_NUMBER() OVER(
+               PARTITION BY rr."FACEBOOK_ACCOUNTS_HK"
+               ORDER BY rr."_FIVETRAN_SYNCED"
+           ) AS row_number
+    FROM BLINKIST_DEV.hackday.facebook_accounts_staging_hashed AS rr
+    WHERE rr."FACEBOOK_ACCOUNTS_HK" IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a."FACEBOOK_ACCOUNTS_HK", a."ACCOUNT_ID", a."_FIVETRAN_SYNCED", a."RECORD_SOURCE"
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert
+      );
+14:06:33.388728 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+14:06:36.058449 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 2.67 seconds
+14:06:36.077385 [debug] [Thread-2  ]: finished collecting timing info
+14:06:36.078089 [debug] [Thread-2  ]: On model.HackdayVault.facebook_accounts_hub: Close
+14:06:36.382284 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '357eeaac-f7b1-4e35-ac6b-5f64fac2f4d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1244422e0>]}
+14:06:36.383841 [info ] [Thread-2  ]: 3 of 3 OK created incremental model hackday.facebook_accounts_hub .............. [[32mSUCCESS 1[0m in 3.05s]
+14:06:36.385236 [debug] [Thread-2  ]: Finished running node model.HackdayVault.facebook_accounts_hub
+14:06:36.388019 [debug] [MainThread]: Acquiring new snowflake connection "master"
+14:06:36.389289 [info ] [MainThread]: 
+14:06:36.390281 [info ] [MainThread]: Finished running 2 view models, 1 incremental model in 9.88s.
+14:06:36.391214 [debug] [MainThread]: Connection 'master' was properly closed.
+14:06:36.391697 [debug] [MainThread]: Connection 'model.HackdayVault.facebook_accounts_staging_raw' was properly closed.
+14:06:36.392047 [debug] [MainThread]: Connection 'model.HackdayVault.facebook_accounts_staging_hashed' was properly closed.
+14:06:36.392667 [debug] [MainThread]: Connection 'model.HackdayVault.facebook_accounts_hub' was properly closed.
+14:06:36.485940 [info ] [MainThread]: 
+14:06:36.486280 [info ] [MainThread]: [32mCompleted successfully[0m
+14:06:36.486637 [info ] [MainThread]: 
+14:06:36.486840 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+14:06:36.487084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x117a96af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12439bb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12437cf70>]}
