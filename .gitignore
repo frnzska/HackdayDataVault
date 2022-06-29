@@ -1,0 +1,10 @@
+
+target/
+
+*.log
+
+.idea/
+
+dbt_modules
+
+.DS_Store
